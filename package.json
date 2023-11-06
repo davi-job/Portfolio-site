@@ -1,0 +1,15 @@
+{
+    "name": "portfolio-site",
+    "version": "0.1.0",
+    "description": "Davi Job front-end dev porfolio page",
+    "main": "index.html",
+    "devDependencies": {},
+    "author": "Davi Job",
+    "license": "ISC",
+    "scripts": {
+        "sass": "sass --watch src/sass:src/styles"
+    },
+    "dependencies": {
+        "sass": "^1.64.2"
+    }
+}

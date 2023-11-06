@@ -1,0 +1,123 @@
+/**************************************/
+/*************** HEADER ***************/
+/**************************************/
+
+.header-sticky {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.header-box {
+    align-items: center;
+
+    max-width: 135rem;
+
+    padding: 2rem 0;
+}
+
+.header-list {
+    gap: 6.4rem;
+
+    align-items: center;
+
+    list-style-type: none;
+}
+
+.header-list-link {
+    color: var(--text);
+}
+
+.header-list-link:hover {
+    transform: translateY(-0.3rem);
+
+    text-shadow: 0.75rem 0.75rem 1.5rem rgba(121, 80, 242, 0.1);
+}
+
+.header-list .header-list-btn {
+    background-color: var(--primary);
+    color: #fff;
+
+    font-size: 2rem;
+
+    padding: 1.2rem 2.4rem;
+
+    border-radius: 15px;
+
+    text-shadow: none;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(121, 80, 242, 0.1);
+}
+
+.header-list .header-list-btn:hover {
+    transform: translateY(-0.3rem);
+
+    background-color: var(--primary-shade-2);
+
+    text-shadow: none;
+    box-shadow: 0.8rem 0.8rem 1.6rem rgba(121, 80, 242, 0.15);
+}
+
+/**************************************/
+/*************** FOOTER ***************/
+/**************************************/
+
+.footer {
+    background-image: radial-gradient(
+        circle at 50% 60%,
+        var(--primary),
+        var(--primary-shade-1)
+    );
+
+    padding: 40rem 3.8rem 12rem;
+}
+
+.footer-box {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer-logo {
+    color: var(--white);
+    border-color: var(--white);
+
+    margin-bottom: 6.4rem;
+}
+
+.footer-social-links-list {
+    gap: 2.4rem;
+
+    list-style-type: none;
+
+    margin-bottom: 4.8rem;
+}
+
+.footer-social-link:link,
+.footer-social-link:visited {
+    color: var(--white);
+
+    padding: 0.8rem;
+
+    border-radius: 50%;
+    border: 2px solid var(--primary-tint-2);
+
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s, border 0.15s;
+}
+
+.footer-social-link:hover,
+.footer-social-link:active {
+    border-color: transparent;
+
+    transform: scale(2);
+}
+
+.footer-social-icon {
+    height: 2.8rem;
+    width: 2.8rem;
+}
+
+.footer-copyright {
+    color: var(--primary-tint-3);
+}

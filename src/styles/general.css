@@ -1,0 +1,262 @@
+:root {
+    --white: #fff;
+    --black: #000;
+
+    /* TEXT COLOR */
+
+    --text: #071727;
+
+    --text-tint-1: #202e3d;
+    --text-tint-2: #394552;
+    --text-tint-3: #6a747d;
+    --text-tint-4: #9ca2a9;
+    --text-tint-5: #cdd1d4;
+
+    --text-shade-1: #061523;
+    --text-shade-2: #06121f;
+    --text-shade-3: #040e17;
+    --text-shade-4: #030910;
+    --text-shade-5: #010508;
+
+    /* BACKGROUND COLOR */
+
+    --background: #f9f8fc;
+
+    --background-tint-1: #faf9fc;
+    --background-tint-2: #faf9fd;
+    --background-tint-3: #fbfbfd;
+    --background-tint-4: #fdfcfe;
+    --background-tint-5: #fefefe;
+
+    --background-shade-1: #e0dfe3;
+    --background-shade-2: #c7c6ca;
+    --background-shade-3: #959597;
+    --background-shade-4: #646365;
+    --background-shade-5: #323232;
+
+    /* PRIMARY COLOR */
+
+    --primary: #7950f2;
+
+    --primary-tint-1: #8662f3;
+    --primary-tint-2: #9473f5;
+    --primary-tint-3: #af96f7;
+    --primary-tint-4: #c9b9fa;
+    --primary-tint-5: #f7f5ff;
+
+    --primary-shade-1: #6d48da;
+    --primary-shade-2: #6140c2;
+    --primary-shade-3: #493091;
+    --primary-shade-4: #302061;
+    --primary-shade-5: #181030;
+
+    /* SECONDARY COLOR */
+
+    --secondary: #b5ceee;
+
+    --secondary-tint-1: #bcd3f0;
+    --secondary-tint-2: #c4d8f1;
+    --secondary-tint-3: #d3e2f5;
+    --secondary-tint-4: #e1ebf8;
+    --secondary-tint-5: #f0f5fc;
+
+    --secondary-shade-1: #a3b9d6;
+    --secondary-shade-2: #91a5be;
+    --secondary-shade-3: #6d7c8f;
+    --secondary-shade-4: #48525f;
+    --secondary-shade-5: #242930;
+
+    /* ACCENT COLOR */
+
+    --accent: #fcf75e;
+
+    --accent-tint-1: #ffc51a;
+    --accent-tint-2: #ffcc33;
+    --accent-tint-3: #ffd966;
+    --accent-tint-4: #ffe599;
+    --accent-tint-5: #fff2cc;
+
+    --accent-shade-1: #e6ac00;
+    --accent-shade-2: #cc9900;
+    --accent-shade-3: #997300;
+    --accent-shade-4: #664c00;
+    --accent-shade-5: #332600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 2px solid var(--accent);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+
+    line-height: 1.5;
+
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    min-height: 100svh;
+    max-width: 100svw;
+
+    overflow-x: hidden;
+
+    background-color: var(--background);
+    color: var(--text);
+}
+
+::-moz-selection {
+    color: var(--accent-shade-5);
+    background: var(--accent);
+}
+
+::selection {
+    color: var(--accent-shade-5);
+    background: var(--accent);
+}
+
+/***********************************************/
+/*************** UTILITY CLASSES ***************/
+/***********************************************/
+
+/********** LAYOUT **********/
+
+.container {
+    max-width: 120rem;
+
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* grid */
+
+.grid {
+    display: grid;
+    gap: 0;
+}
+
+.grid--2--col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4--col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5--col {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* flexbox */
+
+.flex {
+    display: flex;
+    gap: 0;
+}
+
+.flex--row--reverse {
+    flex-direction: row-reverse;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--space-around {
+    justify-content: space-around;
+}
+
+.flex--space-between {
+    justify-content: space-between;
+}
+
+/********** BUTTONS **********/
+
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease-in;
+
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    color: var(--primary);
+}
+
+/********** COMPONENTS **********/
+
+.logo {
+    align-items: start;
+
+    border-radius: 1rem;
+
+    gap: 0;
+
+    font-size: 2.8rem;
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    padding: 0.5rem 3rem 0.5rem 0.1rem;
+
+    border: 3px solid var(--primary);
+    color: var(--primary);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.heading-primary {
+    font-size: 5.8rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.5px;
+}
+
+.heading-secondary {
+    font-size: 2.8rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.subheading {
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    line-height: 1.2;
+
+    margin-bottom: 0.4rem;
+}

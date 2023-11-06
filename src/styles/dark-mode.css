@@ -1,0 +1,49 @@
+.dark {
+    /* TEXT COLOR */
+
+    --text: #f9f8fc;
+
+    --text-tint-1: #faf9fc;
+    --text-tint-2: #faf9fd;
+    --text-tint-3: #fbfbfd;
+    --text-tint-4: #fdfcfe;
+    --text-tint-5: #fefefe;
+
+    --text-shade-1: #e0dfe3;
+    --text-shade-2: #c7c6ca;
+    --text-shade-3: #959597;
+    --text-shade-4: #646365;
+    --text-shade-5: #323232;
+
+    /* BACKGROUND COLOR */
+
+    --background: #071727;
+
+    --background-tint-1: #202e3d;
+    --background-tint-2: #394552;
+    --background-tint-3: #6a747d;
+    --background-tint-4: #9ca2a9;
+    --background-tint-5: #cdd1d4;
+
+    --background-shade-1: #061523;
+    --background-shade-2: #06121f;
+    --background-shade-3: #040e17;
+    --background-shade-4: #030910;
+    --background-shade-5: #010508;
+
+    /* SECONDARY COLOR */
+
+    --secondary: #020509;
+
+    --secondary-tint-1: #1b1e22;
+    --secondary-tint-2: #35373a;
+    --secondary-tint-3: #67696b;
+    --secondary-tint-4: #9a9b9d;
+    --secondary-tint-5: #cccdce;
+
+    --secondary-shade-1: #020508;
+    --secondary-shade-2: #020407;
+    --secondary-shade-3: #010305;
+    --secondary-shade-4: #010204;
+    --secondary-shade-5: #000102;
+}
