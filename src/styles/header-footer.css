@@ -2,9 +2,12 @@
 /*************** HEADER ***************/
 /**************************************/
 
-.header-sticky {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    z-index: 100;
+.header {
+    background-color: var(--background);
+
+    width: 100%;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .header-box {
@@ -16,7 +19,7 @@
 }
 
 .header-list {
-    gap: 6.4rem;
+    gap: 5.2rem;
 
     align-items: center;
 
@@ -25,10 +28,15 @@
 
 .header-list-link {
     color: var(--text);
+
+    background: transparent;
+    border: none;
+
+    font-weight: 600;
 }
 
 .header-list-link:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.2rem);
 
     text-shadow: 0.75rem 0.75rem 1.5rem rgba(121, 80, 242, 0.1);
 }
