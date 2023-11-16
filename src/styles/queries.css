@@ -10,21 +10,50 @@
     }
 }
 
+/* 1250px */
+
+@media (max-width: 78.125em) {
+    html {
+        font-size: calc(8.5 / 16 * 100%);
+    }
+
+    .hero-box {
+        row-gap: 9.2rem;
+    }
+
+    .hero-text-box {
+        margin-top: 10rem;
+    }
+
+    .hero-text-box h1 {
+        font-size: 5.2rem;
+    }
+
+    .hero-img-box {
+        scale: 0.95;
+    }
+
+    .project-card::after {
+        width: 9rem;
+
+        right: -9rem;
+    }
+
+    .project-card:nth-of-type(3):after {
+        left: -9rem;
+    }
+}
+
 /* 1050px */
 
 @media (max-width: 65.625em) {
     .hero-box {
-        padding: 0 4.8rem;
+        padding: 0 0 0 4.8rem;
     }
 
     .heading-primary {
         font-size: 4.8rem;
         letter-spacing: -1px;
-    }
-
-    .hero-tech-stack {
-        padding-left: 4.8rem;
-        padding-right: 4.8rem;
     }
 
     .projects-heading,
@@ -36,7 +65,7 @@
         grid-template-columns: 1fr;
         row-gap: 4rem;
 
-        width: fit-content;
+        width: 55%;
     }
 
     .project-text-box {
@@ -56,6 +85,16 @@
         grid-row: inherit;
     }
 
+    .project-card::after {
+        width: 9rem;
+
+        right: -11rem;
+    }
+
+    .project-card:nth-of-type(3):after {
+        left: -11rem;
+    }
+
     .project-link:link,
     .project-link:visited {
         font-size: 2.8rem;
@@ -67,6 +106,33 @@
 /* 950px */
 
 @media (max-width: 59.375em) {
+    .hero-box {
+        column-gap: 4.2rem;
+    }
+
+    .hero-text-box {
+        max-width: 85%;
+    }
+
+    .hero-tech-stack {
+        flex-direction: column;
+
+        justify-self: start;
+    }
+
+    .techstack-text {
+        border-right: none;
+        border-bottom: 2px solid var(--text);
+
+        padding: 0 0 1.2rem 0;
+    }
+
+    .tech-stack-list {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
     .about-me-box {
         grid-template-columns: 1fr;
 
@@ -99,11 +165,71 @@
     }
 }
 
+/* 850px */
+
+@media (max-width: 53.125em) {
+    .hero-box {
+        row-gap: 2rem;
+    }
+
+    .hero-text-box {
+        max-width: 100%;
+
+        margin-top: 8rem;
+    }
+
+    .hero-img-box {
+        scale: 0.9;
+    }
+}
+
 /* 775px */
 
 @media (max-width: 48.4375em) {
     html {
-        font-size: 56.25%;
+        font-size: calc(8 / 16 * 100%);
+    }
+
+    .hero-box {
+        margin-top: 25rem;
+
+        padding: 0 2.4rem;
+        row-gap: 9.2rem;
+
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text-box {
+        text-align: center;
+
+        margin-top: -5.2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-img-box {
+        grid-row: 1;
+
+        scale: 0.8;
+
+        translate: 2rem 0;
+    }
+
+    .hero-social-links-box {
+        gap: 3.2rem;
+
+        justify-content: center;
+    }
+
+    .hero-social-icon {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .hero-tech-stack {
+        justify-self: center;
     }
 
     .skills-box {
@@ -131,8 +257,16 @@
         width: 80%;
     }
 
+    .project-card::after {
+        display: none;
+    }
+
     .contact-box {
         padding: 4.8rem 3.2rem;
+    }
+
+    .about-me {
+        padding: 8.4rem 0 24rem;
     }
 }
 
@@ -147,33 +281,6 @@
         grid-template-columns: 1fr;
     }
 
-    .hero-box {
-        padding: 0 2.4rem;
-    }
-
-    .hero-text-box {
-        text-align: center;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .hero-social-links-box {
-        gap: 3.2rem;
-
-        justify-content: center;
-    }
-
-    .hero-social-icon {
-        width: 3.6rem;
-        height: 3.6rem;
-    }
-
-    .hero-tech-stack {
-        flex-direction: column;
-    }
-
     .about-me-text-box {
         max-width: 85%;
     }
@@ -184,19 +291,6 @@
 
     .about-me-heading {
         margin-bottom: 2.4rem;
-    }
-
-    .techstack-text {
-        border-right: none;
-        border-bottom: 2px solid var(--text);
-
-        padding: 0 0 1.2rem 0;
-    }
-
-    .tech-stack-list {
-        flex-wrap: wrap;
-
-        justify-content: center;
     }
 
     .project-btns-box,
