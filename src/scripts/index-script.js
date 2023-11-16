@@ -23,10 +23,12 @@ let heroVideo = document.querySelector(".hero-video");
 let bodyCover = document.querySelector(".body-cover");
 const techStackListItems = document.querySelectorAll(".tech-stack-list-item");
 
-heroVideo.addEventListener("play", function () {
-    bodyCover.classList.add("hidden");
-    document.documentElement.style.overflowY = "auto";
-    techStackListItems.forEach((item) => {
-        item.classList.add("animated");
+heroVideo.addEventListener("loadedmetadata", function () {
+    heroVideo.addEventListener("play", function () {
+        bodyCover.classList.add("hidden");
+        document.documentElement.style.overflowY = "auto";
+        techStackListItems.forEach((item) => {
+            item.classList.add("animated");
+        });
     });
 });
