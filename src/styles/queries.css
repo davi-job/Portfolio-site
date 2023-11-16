@@ -187,7 +187,11 @@
 
 @media (max-width: 48.4375em) {
     html {
-        font-size: calc(8 / 16 * 100%);
+        font-size: calc(8.5 / 16 * 100%);
+    }
+
+    .header-nav {
+        display: none;
     }
 
     .hero-box {
@@ -202,7 +206,7 @@
     .hero-text-box {
         text-align: center;
 
-        margin-top: -5.2rem;
+        margin-top: -6.4rem;
 
         display: flex;
         flex-direction: column;
@@ -274,7 +278,7 @@
 
 @media (max-width: 41.25em) {
     html {
-        font-size: 50%;
+        font-size: calc(8.5 / 16 * 100%);
     }
 
     .grid {

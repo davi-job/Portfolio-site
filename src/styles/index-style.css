@@ -69,6 +69,8 @@
     transform: translateX(-10%);
 
     animation: wavy 8s linear infinite;
+
+    box-shadow: 0 0 24px 12px #7950f275;
 }
 
 .hero-img-box::before {
@@ -644,6 +646,10 @@
 
 .contact-form-msg {
     min-height: 14rem;
+}
+
+.contact-form-btn-box {
+    grid-column: span 2;
 }
 
 .contact-form-btn {

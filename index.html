@@ -458,7 +458,12 @@
                         hesitate to contact me!
                     </p>
 
-                    <form action="" class="contact-form grid grid--2--col">
+                    <form
+                        action="https://public.herotofu.com/v1/288a68a0-847a-11ee-877c-fb7f542d82d0"
+                        method="post"
+                        accept-charset="UTF-8"
+                        class="contact-form grid grid--2--col"
+                    >
                         <div class="contact-form-input-box">
                             <label for="name" class="contact-form-label"
                                 >Name</label
@@ -468,6 +473,7 @@
                                 name="name"
                                 id="name"
                                 class="contact-form-input"
+                                required
                             />
                         </div>
 
@@ -480,6 +486,7 @@
                                 name="email"
                                 id="email"
                                 class="contact-form-input"
+                                required
                             />
                         </div>
 
@@ -494,10 +501,35 @@
                                 cols="30"
                                 rows="10"
                                 class="contact-form-input contact-form-msg"
+                                required
                             ></textarea>
                         </div>
 
-                        <button class="contact-form-btn btn">Submit</button>
+                        <div class="contact-form-btn-box">
+                            <input
+                                type="submit"
+                                value="Submit"
+                                class="contact-form-btn btn"
+                            />
+                            <div
+                                style="
+                                    text-indent: -99999px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    position: absolute;
+                                "
+                                aria-hidden="true"
+                            >
+                                <input
+                                    type="text"
+                                    name="_gotcha"
+                                    tabindex="-1"
+                                    autocomplete="off"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- <button class="contact-form-btn btn">Submit</button> -->
                     </form>
                 </div>
             </section>
