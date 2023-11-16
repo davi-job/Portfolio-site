@@ -428,10 +428,9 @@
 
     position: absolute;
     top: 20%;
-    right: -12%;
+    right: -12rem;
 
     width: 10rem;
-    height: 9rem;
 
     background-image: url(../img/HOVER\ ME.webp);
     background-position: center;
@@ -448,7 +447,7 @@
 }
 
 .project-card:nth-of-type(3):after {
-    left: -12%;
+    left: -12rem;
 
     background-image: url(../img/HOVER\ ME2.webp);
 
