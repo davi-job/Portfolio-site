@@ -35,6 +35,8 @@
         <title>Davi Job</title>
     </head>
     <body class="">
+        <div class="body-cover"></div>
+
         <header class="header">
             <div class="header-box container flex flex--space-between">
                 <div class="logo flex flex--column">
@@ -103,7 +105,20 @@
                         </div>
                     </div>
 
-                    <div class="hero-img-box"></div>
+                    <div class="hero-video-box">
+                        <video
+                            height="610"
+                            class="hero-video"
+                            autoplay
+                            muted
+                            loop
+                        >
+                            <source
+                                src="./src/img/hero_video.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
 
                     <div class="hero-tech-stack flex">
                         <p class="techstack-text">Tech stack</p>
@@ -222,7 +237,13 @@
 
             <section class="about-me">
                 <div class="about-me-box container grid">
-                    <div class="about-me-img-box"></div>
+                    <div class="about-me-img-box">
+                        <img
+                            src="src\img\about me placeholder.jpg"
+                            alt=""
+                            loading="lazy"
+                        />
+                    </div>
 
                     <div class="about-me-text-box">
                         <p class="about-me-subheading subheading">about me</p>
@@ -321,6 +342,7 @@
                                 class="project-img"
                                 src="/src/img/preciweather.webp"
                                 alt=""
+                                loading="lazy"
                             />
                         </div>
 
@@ -364,6 +386,7 @@
                                 class="project-img hoverable"
                                 src="/src/img/omnifood.webp"
                                 alt=""
+                                loading="lazy"
                             />
                         </div>
 
@@ -405,6 +428,7 @@
                                 class="project-img hoverable"
                                 src="/src/img/jobuniformes.webp"
                                 alt=""
+                                loading="lazy"
                             />
                         </div>
 

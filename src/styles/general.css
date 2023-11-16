@@ -103,6 +103,7 @@ html {
     scroll-behavior: smooth;
 
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -259,4 +260,25 @@ body {
     line-height: 1.2;
 
     margin-bottom: 0.4rem;
+}
+
+.body-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100svh;
+
+    background-color: var(--background);
+
+    z-index: 100;
+
+    transition: all 0.4s ease-in;
+}
+
+.hidden {
+    opacity: 0;
+
+    pointer-events: none;
 }
