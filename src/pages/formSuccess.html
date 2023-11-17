@@ -192,8 +192,15 @@
         </div>
 
         <script>
-            var url = window.location.href;
-            var newUrl = url.replace("/src/pages/formsuccess", "/success");
+            let url = window.location.href;
+            let newUrl;
+
+            if (url.includes("/src/pages/formsuccess")) {
+                newUrl = url.replace("/src/pages/formsuccess", "/success");
+            } else if (url.includes("/src/pages/formSuccess")) {
+                newUrl = url.replace("/src/pages/formSuccess", "/success");
+            }
+
             history.replaceState(null, null, newUrl);
         </script>
     </body>
