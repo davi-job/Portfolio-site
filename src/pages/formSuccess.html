@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="/src/styles/general.css" />
+
+        <!-- GOOGLE FONTS -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- IONICONS -->
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+
+        <!-- CSS -->
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                position: relative;
+
+                row-gap: 9.2rem;
+
+                justify-content: center;
+                align-items: center;
+
+                font-family: "Roboto", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+
+                line-height: 1.5;
+
+                color: #212529;
+                background-image: radial-gradient(
+                    circle at 50% 100%,
+                    var(--primary-shade-3),
+                    var(--primary-shade-1)
+                );
+            }
+
+            .logo {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+
+                transform: translateX(-50%);
+
+                color: #fff;
+                border-color: #fff;
+            }
+
+            .success-box {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+                max-width: 600px;
+
+                margin: 0 auto;
+                padding: 2rem;
+
+                text-align: center;
+
+                border: 2px solid var(--primary-shade-2);
+                border-radius: 24px;
+
+                background-color: var(--background);
+
+                box-shadow: 0 6px 20px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .success-icon {
+                color: var(--primary-shade-1);
+
+                font-size: 7rem;
+
+                margin-bottom: 1.6rem;
+            }
+
+            .success-box h1 {
+                margin-bottom: 1rem;
+
+                font-size: 3.6rem;
+                font-weight: 700;
+
+                line-height: 1.2;
+
+                color: var(--primary-shade-1);
+            }
+
+            .success-box p {
+                margin-bottom: 3.2rem;
+
+                font-size: 1.6rem;
+                font-weight: 400;
+
+                line-height: 1.5;
+
+                color: #212529;
+
+                max-width: 60%;
+            }
+
+            .success-box a {
+                display: inline-block;
+
+                margin-top: 1rem;
+                margin-bottom: 1.4rem;
+                padding: 0.8rem 1.8rem;
+
+                font-size: 1.5rem;
+                font-weight: 400;
+
+                line-height: 1.5;
+
+                color: #fff;
+                background-color: var(--primary-shade-2);
+
+                text-decoration: none;
+
+                border-radius: 0.8rem;
+
+                transition: all 0.2s ease-out;
+            }
+
+            .success-box a:hover {
+                background-color: var(--primary);
+            }
+
+            @media (max-width: 768px) {
+                .success-box {
+                    max-width: 80%;
+                }
+
+                .success-box p {
+                    max-width: 90%;
+                }
+            }
+
+            @media (max-width: 575px) {
+                .success-box {
+                    max-width: 90%;
+                }
+
+                .success-box p {
+                    max-width: 100%;
+                }
+            }
+        </style>
+
+        <title>Davi Job</title>
+    </head>
+    <body>
+        <div class="success-box">
+            <ion-icon
+                class="success-icon"
+                name="checkmark-circle-outline"
+            ></ion-icon>
+
+            <h1>Message sent!</h1>
+            <p>
+                Thank you for reaching out to me. I will get back to you as soon
+                as possible.
+            </p>
+            <a href="/index.html">Back to the home page</a>
+        </div>
+
+        <div class="logo flex flex--column">
+            <span>Davi</span>
+            <span>Job</span>
+        </div>
+
+        <script>
+            var url = window.location.href;
+            var newUrl = url.replace("/src/pages/formsuccess", "/success");
+            history.replaceState(null, null, newUrl);
+        </script>
+    </body>
+</html>

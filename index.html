@@ -610,5 +610,11 @@
                 </p>
             </div>
         </footer>
+
+        <script>
+            var url = window.location.href;
+            var newUrl = url.replace("/index.html", "");
+            history.replaceState(null, null, newUrl);
+        </script>
     </body>
 </html>
