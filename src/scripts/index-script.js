@@ -1,34 +1,41 @@
-// Header nav buttons
+document.addEventListener("DOMContentLoaded", function () {
+    // Header nav buttons
+    document
+        .getElementsByClassName("nav-projects-btn")[0]
+        .addEventListener("click", function () {
+            scrollToJustAbove(document.querySelector(".projects"), 60);
+        });
 
-function scrollToJustAbove(element, margin = 0) {
-    let dims = element.getBoundingClientRect();
-    window.scrollTo(window.scrollX, dims.top - margin);
-}
+    document
+        .getElementsByClassName("nav-about-btn")[0]
+        .addEventListener("click", function () {
+            scrollToJustAbove(document.querySelector(".about-me"));
+        });
 
-document
-    .getElementsByClassName("nav-about-btn")[0]
-    .addEventListener("click", function () {
-        scrollToJustAbove(document.querySelector(".about-me"));
-    });
+    function scrollToJustAbove(element, margin = 0) {
+        let dims = element.getBoundingClientRect();
+        window.scrollTo(window.scrollX, dims.top - margin);
+    }
+});
 
-document
-    .getElementsByClassName("nav-projects-btn")[0]
-    .addEventListener("click", function () {
-        scrollToJustAbove(document.querySelector(".projects"), 60);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    let heroVideo = document.querySelector(".hero-video");
+    let bodyCover = document.querySelector(".body-cover");
+    const techStackListItems = document.querySelectorAll(
+        ".tech-stack-list-item"
+    );
 
-// If .hero-video has loaded and is playing, add class to hidden to body-cover and set html overflow-y to auto
-
-let heroVideo = document.querySelector(".hero-video");
-let bodyCover = document.querySelector(".body-cover");
-const techStackListItems = document.querySelectorAll(".tech-stack-list-item");
-
-heroVideo.addEventListener("loadedmetadata", function () {
-    heroVideo.addEventListener("play", function () {
+    function runOnPageLoad() {
         bodyCover.classList.add("hidden");
         document.documentElement.style.overflowY = "auto";
         techStackListItems.forEach((item) => {
             item.classList.add("animated");
         });
+    }
+
+    heroVideo.addEventListener("loadedmetadata", function () {
+        heroVideo.addEventListener("play", runOnPageLoad);
     });
+
+    window.addEventListener("load", runOnPageLoad);
 });
