@@ -194,6 +194,14 @@
         font-size: calc(8.5 / 16 * 100%);
     }
 
+    .mobile-btn {
+        display: block;
+    }
+
+    .mobile-menu {
+        opacity: 1;
+    }
+
     .header-nav {
         display: none;
     }

@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Header nav buttons
-    document
-        .getElementsByClassName("nav-projects-btn")[0]
-        .addEventListener("click", function () {
+    const projectsBtns = document.getElementsByClassName("nav-projects-btn");
+    const aboutBtns = document.getElementsByClassName("nav-about-btn");
+
+    for (let i = 0; i < projectsBtns.length; i++) {
+        projectsBtns[i].addEventListener("click", function () {
             scrollToJustAbove(document.querySelector(".projects"), 60);
         });
+    }
 
-    document
-        .getElementsByClassName("nav-about-btn")[0]
-        .addEventListener("click", function () {
+    for (let i = 0; i < aboutBtns.length; i++) {
+        aboutBtns[i].addEventListener("click", function () {
             scrollToJustAbove(document.querySelector(".about-me"));
         });
+    }
 
     function scrollToJustAbove(element, margin = 0) {
         let dims = element.getBoundingClientRect();
@@ -38,4 +41,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("load", runOnPageLoad);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerInput = document.querySelector(".hamburger input");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileListLinks = document.querySelectorAll(".mobile-list-link");
+    const mobileListBtns = document.querySelectorAll(".mobile-list-btn");
+
+    hamburgerInput.checked = false;
+
+    hamburgerInput.addEventListener("change", function () {
+        if (this.checked) {
+            mobileMenu.classList.add("open");
+        } else {
+            mobileMenu.classList.remove("open");
+        }
+    });
+
+    mobileListLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("open");
+            hamburgerInput.checked = false;
+        });
+    });
+
+    mobileListBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            mobileMenu.classList.remove("open");
+            hamburgerInput.checked = false;
+        });
+    });
 });
