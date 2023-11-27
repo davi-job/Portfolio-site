@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     mobileListLinks.forEach(function (link) {
+        // close mobile menu when link is clicked
         link.addEventListener("click", function () {
-            // close mobile menu when link is clicked
             mobileMenu.classList.remove("open");
             hamburgerInput.checked = false;
         });
