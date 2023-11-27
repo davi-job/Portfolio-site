@@ -41,13 +41,15 @@
     text-shadow: 0.75rem 0.75rem 1.5rem rgba(121, 80, 242, 0.1);
 }
 
-.nav-resume-btn > a {
+.nav-resume-btn > a:link,
+.nav-resume-btn > a:visited {
     color: var(--text);
 
     text-decoration: none;
 }
 
-.nav-resume-btn:hover > a {
+.nav-resume-btn > a:hover,
+.nav-resume-btn > a:active {
     text-shadow: 0.75rem 0.75rem 1.5rem rgba(121, 80, 242, 0.1);
 
     color: var(--primary);
