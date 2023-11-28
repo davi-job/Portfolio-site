@@ -132,3 +132,10 @@
 .mobile-list-link:hover {
     color: var(--primary-tint-5);
 }
+
+.mobile-resume-link:link,
+.mobile-resume-link:visited {
+    color: #fff;
+
+    text-decoration: none;
+}
